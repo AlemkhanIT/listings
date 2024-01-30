@@ -23,6 +23,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 200;
 }
 .header__inner{
     border-radius: 0 0 25px 25px;
@@ -116,7 +117,7 @@ main{
 .about__checkers{
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 8px;
     margin-top: 40px;
 }
 .about__checker{
@@ -134,15 +135,38 @@ main{
     font-size: 20px;
     color: #D93C10;
 }
-
-
-
-
+.checkbox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.about__input{
+    width: 47%;
+}
+.geo{
+    display: none;
+}
+.geo.active>.choose{
+    display: block;
+    padding: 8px 48px 8px 24px;
+    background-color: #fff;
+    background-image: url(public/down.png);
+    background-repeat: no-repeat;
+    background-position: 280px;
+}
+.map{
+    width: 100%;
+    min-height: 412px;
+    background-color: #423D39;
+    border-radius: 8px;
+    margin-top: 8px;
+}
 .listings__info{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .choose{
     appearance: none;
     max-width: 306px;
@@ -269,6 +293,28 @@ select option:hover{
     color: yellow;
     font-weight: 600;
   }
+
+
+
+.listings__pagination{
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 8px;
+}
+.pagination__btn{
+    padding: 4px 8px;
+    text-decoration: none;
+    color: #141414;
+}
+.pagination__btn.active{
+    background: linear-gradient(90deg, #423D39 0.19%, #4F4B48 42.9%, #605D5B 100.19%);
+    color: #fff;
+    border-radius: 4px;
+}
+
+
 
 .footer{
     margin-top: auto;

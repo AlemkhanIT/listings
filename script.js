@@ -11,4 +11,6 @@ function setRatingForElement(element, ratingValue) {
     });
   });
 
-  console.log("hi")
+  console.log("hi");
+
+
