@@ -180,6 +180,7 @@ select option:hover{
     margin-bottom: 32px;
 }
 .listing__item{
+    position: relative;
     width: 297px;
     height: 237px;
     display: flex;
@@ -187,12 +188,87 @@ select option:hover{
     align-items: center;
     overflow: hidden;
     z-index: 20;
-    border-radius: 16px;
+    border-radius: 22px;
+    cursor: pointer;
 }
+.listing__item.darker::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 2; 
+  }
 .listing__item>img{
     width: 100%;
     object-fit: cover;
+    z-index: 1;
 }
+.listing__btn{
+    padding: 4px 8px;
+    background: #D93C10;
+    color: #fff;
+    border-radius: 8px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 14px;
+    z-index: 3;
+}
+.listing__info{
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    z-index: 30;
+    color: #fff;
+    font-size: 20px;
+}
+
+.star-rating {
+    position: relative;
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .stars {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .star, .star-filling {
+    display: inline-block;
+    font-size: 24px; 
+    color: grey;
+  }
+  
+  .star:before {
+    content: "\2605";
+  }
+  
+  .star-filling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 100%;
+    color: gold; 
+    font-size: 24px; 
+  }
+  
+  .star-filling:before {
+    content: "\2605 \2605 \2605 \2605 \2605"; /* пять звезд */
+  }
+  .star-rating>.rating__number{
+    margin-top: 4px;
+    font-size: 18px;
+    color: yellow;
+    font-weight: 600;
+  }
 
 .footer{
     margin-top: auto;
